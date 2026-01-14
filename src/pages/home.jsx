@@ -1,13 +1,17 @@
-import PageLayout from "../layouts/PageLayout";
-
+import { useState } from "react";
+import PageLayout from "../layouts/PageLayout.jsx";
+import PostEditor from "../components/PostEditor.jsx";
+import { getAuthToken } from "../utils/auth.js";
 
 export default function Home() {
-    return(
-        <PageLayout>
-            <div className="p-4">
-                <Link to="/"><h1 className="text-2xl font-bold">kiwitter</h1></Link>
-                <p>Burada twitler listelenecek...</p>
-            </div>
-        </PageLayout>
-    )
+  const token = getAuthToken(); 
+  const handleAddPost = (newTwit) => {
+    console.log("Yeni tweet eklendi:", newTwit);
+  };
+
+  return (
+    <PageLayout>
+            {token && <PostEditor addPost={handleAddPost} />}
+    </PageLayout>
+  );
 }

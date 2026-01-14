@@ -5,6 +5,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --toastify-color-progress-success: #ff7e3e;
 }
 
 @tailwind base;

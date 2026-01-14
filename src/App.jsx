@@ -20,7 +20,7 @@ function App() {
         </Route>
 
         <Route path="/" exact>
-          {/* /?variant=most_liked */}
+          
           <Home  />
         </Route>
         <Route path="/profile/:nick">

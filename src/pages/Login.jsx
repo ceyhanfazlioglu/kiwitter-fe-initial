@@ -42,7 +42,7 @@ export default function Login() {
 
   return (
     <AuthLayout>
-      <h1 className="text-3xl text-center font-semibold tracking-tighter text-lime-700">
+      <h1 className="text-3xl text-center font-semibold tracking-tighter text-[#ff7e3e]">
         Hoş Geldin!
       </h1>
       <form onSubmit={handleSubmit(handleLogin)}>
@@ -76,7 +76,7 @@ export default function Login() {
         <div className="pt-4">
           <button
             type="submit"
-            className="h-12 text-center block w-full rounded-lg bg-lime-700 text-white font-bold "
+            className="h-12 text-center block w-full rounded-lg bg-[#ff7e3e] text-white font-bold "
           >
             GİRİŞ
           </button>

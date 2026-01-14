@@ -1,12 +1,16 @@
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
-import PageLayout from "./PageLayout";
-import Login from "./Login";
-import Signup from "./Signup";
+import PageLayout from "./layouts/PageLayout.jsx";
+import Login from "./pages/Login.jsx";
+import Signup from "./pages/Signup.jsx";
+import './utils/devserver.js';
+import { ToastContainer } from 'react-toastify';
+import Home from "./pages/home.jsx";    
 
 function App() {
   return (
     <div>
+      <ToastContainer />
       <Switch>
         <Route path="/login">
           <Login />
@@ -17,7 +21,7 @@ function App() {
 
         <Route path="/" exact>
           {/* /?variant=most_liked */}
-          <PageLayout>Home</PageLayout>
+          <Home  />
         </Route>
         <Route path="/profile/:nick">
           <PageLayout>Profile page</PageLayout>
@@ -26,6 +30,7 @@ function App() {
           <PageLayout>Twit detail</PageLayout>
         </Route>
       </Switch>
+      <ToastContainer />
     </div>
   );
 }
